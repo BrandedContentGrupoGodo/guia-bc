@@ -4,3 +4,17 @@
 .eyebrow,.card-link,.text-link,.steps>li:before{color:#b00000}.print:hover{color:#b00000}.sidebar nav a[aria-current=page]{color:#a40000}.card{background:#fff;border-top-color:#ff0000}.card:hover{background:#fff6f3}.tutorial-shot{margin:22px 0 34px;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:#faf9f8}.tutorial-shot a{display:block}.tutorial-shot img{display:block;width:100%;height:auto}.tutorial-shot figcaption{padding:13px 17px;font-size:.875rem;color:#57514b}.tutorial-shot figcaption span{display:block;color:#716960;font-size:.75rem;margin-top:3px}.technical{margin-top:35px}.technical>summary{color:#a40000}.technical h3{margin-top:24px}@media print{.tutorial-shot{break-inside:avoid}.tutorial-shot figcaption span{display:none}}
 
 .download-hero{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:28px;border:1px solid var(--border);border-top:4px solid #ff0000;border-radius:7px;margin:30px 0;background:#faf9f8}.download-hero h2{margin:10px 0 12px}.download-hero p{margin:0;max-width:560px}.download-button{display:inline-block;flex-shrink:0;background:#403f3d;color:white;text-decoration:none;font-weight:700;font-size:.9375rem;padding:13px 19px;border-radius:5px}.download-button:hover{background:#2e2d2b}@media(max-width:950px){.download-hero{flex-direction:column;align-items:flex-start}.download-button{white-space:normal}}@media print{.download-button{background:none;color:#403f3d;border:1px solid #403f3d}}
+
+/* Cabecera inspirada en la web corporativa de Grupo Godó */
+.topbar{min-height:104px;background:#fff;color:#403f3d;border-bottom:1px solid #e2dfdc;padding:24px 34px;gap:28px}
+.brand{color:#403f3d;gap:28px;min-width:0}
+.logo{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.6rem,2.4vw,2.2rem);font-weight:700;letter-spacing:-.055em;line-height:1.1;background:none;border-radius:0;padding:0;white-space:nowrap}
+.logo:after{content:"";display:inline-block;width:7px;height:7px;background:#ff0000;border-radius:50%;margin-left:5px;vertical-align:top;margin-top:5px}
+.brand-description{font-size:.875rem;color:#666360;border-left:1px solid #e2dfdc;padding-left:28px;line-height:1.4}
+.top-meta{color:#403f3d;font-size:.6875rem;letter-spacing:.08em}.top-meta span{color:#ff0000}
+.layout{min-height:calc(100vh - 104px)}
+.nav-disabled{display:flex;align-items:center;gap:12px;font-size:.875rem;padding:11px 12px;line-height:1.4;color:#777;cursor:default}
+.nav-disabled small{display:block;font-size:.6875rem;margin-top:3px;color:#777}.unavailable-label{font-size:.875rem;color:#666360}
+@media(max-width:1050px){.top-meta{display:none}}
+@media(max-width:750px){.topbar{padding:22px 20px;min-height:100px}.brand{align-items:flex-start;flex-direction:column;gap:6px}.logo{font-size:1.85rem}.brand-description{padding:0;border:0;font-size:.8125rem}.nav-disabled{white-space:nowrap;padding:9px 12px}.nav-disabled small{font-size:.625rem}}
+@media print{.topbar{display:none}}

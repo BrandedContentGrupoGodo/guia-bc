@@ -3,7 +3,7 @@
 ## Qué recibes
 
 `ejemplo-xalok.html` contiene una pieza de demostración terminada: «Diseñar para
-entender». Tiene hero, índice con tres capítulos, textos completos, enlaces
+entender». Tiene hero, imagen con URL absoluta, índice con tres capítulos, textos completos, enlaces
 internos, desplegables y un botón para abrir o cerrar todas las claves.
 No hay clientes reales, marcadores por completar ni URLs inventadas.
 
@@ -61,7 +61,7 @@ muestra solo cuando la inicialización se completa. No modifica módulos del med
 
 ## Por qué CSS y JS están incluidos
 
-Esta es una entrega autocontenida para que el proveedor pueda descargarla y probarla
+Los estilos y el comportamiento están incluidos en esta entrega para que el proveedor pueda descargarla y probarla
 sin preparar primero un alojamiento. Para una noticia real, los recursos deben alojarse en el repositorio de su
 proyecto y mantenerse independientes de esta guía.
 
@@ -110,3 +110,26 @@ Cambiar la raíz, los IDs y todas sus referencias de manera coherente en HTML, C
 JS y ajuste de LV. Comprobar jerarquía de encabezados en el medio, contenido,
 identificación comercial y créditos. No presentar la demo como una pieza de cliente.
 Los selectores de LV no están validados para MD.
+
+## Imagen con URL absoluta
+
+La demo usa una ilustración propia incluida en `assets/img/composicion-editorial.svg`.
+El HTML apunta a la copia publicada en GitHub Pages, no al archivo relativo:
+
+```html
+<img class="bc-demo__image"
+  src="https://brandedcontentgrupogodo.github.io/guia-bc/downloads/kit-xalok/assets/img/composicion-editorial.svg"
+  alt="Ilustración de una composición editorial adaptada a escritorio y móvil"
+  width="1600" height="900" loading="lazy" decoding="async">
+```
+
+- `src`: URL pública HTTPS del archivo. No usar la página de GitHub con `/blob/`.
+- `alt`: descripción útil del contenido; si la imagen es decorativa, usar `alt=""`.
+- `width` y `height`: dimensiones originales para reservar espacio y evitar saltos.
+- CSS: `width: 100%; height: auto` mantiene la proporción al adaptarse a la pantalla.
+- `loading="lazy"`: adecuado para esta imagen situada después del hero; evitarlo en
+  la imagen principal visible al abrir una pieza.
+- La demo necesita conexión para cargar la imagen y Google Fonts. El ZIP incluye
+  el SVG para estudiarlo o publicarlo en el alojamiento de otro proyecto.
+- En una entrega real, sustituir la imagen y su URL por las del proyecto; comprobar
+  que la URL abre sin iniciar sesión y que el recurso carga desde la noticia.

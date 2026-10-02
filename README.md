@@ -77,7 +77,7 @@ Abrir http://localhost:8000 en el navegador. Detener con Ctrl+C.
 - Comprobar móvil y escritorio.
 
 Las rutas de la guía son relativas y funcionan bajo `/guia-bc/`. La demo incluye
-sus estilos y script; únicamente su fuente usa una URL pública, con tipografías
+sus estilos y script; su fuente y la imagen de ejemplo usan URLs públicas, con tipografías
 de respaldo. La prueba de la demo en navegador no certifica su integración en Xalok.
 
 ## Alcance de esta versión

@@ -43,3 +43,5 @@
 @media (max-width: 700px) { .bc-demo .bc-demo__cards { grid-template-columns: 1fr; } }
 /* Sin animaciones ni scroll suave: no se introduce movimiento que reducir.
    El contenido y los details siguen disponibles si el JS no carga. */
+
+.bc-demo .bc-demo__figure{margin:40px auto}.bc-demo .bc-demo__image{display:block;width:100%;height:auto;border-radius:8px}.bc-demo .bc-demo__caption{font-size:.8125rem;line-height:1.5;color:#666360;margin-top:12px}
