@@ -1,0 +1,30 @@
+article.visual__story--free:has(.bc-proyecto) .container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow: visible !important;
+}
+
+article.visual__story--free:has(.bc-proyecto) .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  overflow: visible !important;
+}
+
+article.visual__story--free:has(.bc-proyecto) .visual-article-free.col-12 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow: visible !important;
+}
+
+article.visual__story--free:has(.bc-proyecto)
+  .visual-article-free.col-12 > .content-free-html {
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow: visible !important;
+}
+
+
+article.visual__story--free:has(.bc-proyecto) {
+  overflow: visible !important;
+}

@@ -1,0 +1,160 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Diseñar para entender · Ejemplo de entrega BC</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='red'/%3E%3C/svg%3E"><style>body{margin:0}</style></head><body><style>
+/* Ajuste exclusivo de esta pieza en la plantilla Libre de LV.
+   Scope: article que contiene .bc-demo, tanto en preview como en publicada.
+   No depende de data-wf-page-id ni de un ID de noticia.
+   Verificar los wrappers reales al integrarlo. No aplicar a MD sin validación. */
+article.visual__story--free:has(.bc-demo) > .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+article.visual__story--free:has(.bc-demo) > .container-fluid > .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+article.visual__story--free:has(.bc-demo) .visual-article-free.col-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+article.visual__story--free:has(.bc-demo)
+.visual-article-free.col-12 > .content-free-html {
+  margin: 0 !important;
+}
+article.visual__story--free:has(.bc-demo) {
+  overflow: visible !important;
+}
+
+/* Estilos de la pieza incluidos para que esta entrega de ejemplo sea autocontenida. */
+/* Estilos de la pieza de demostración: todo limitado a .bc-demo */
+.bc-demo {
+  --bc-demo-red: #ff0000;
+  --bc-demo-ink: #403f3d;
+  --bc-demo-link: #ac0000;
+  box-sizing: border-box;
+  width: 100%;
+  color: var(--bc-demo-ink);
+  background: #fff;
+  font: 400 1rem/1.7 "Open Sans", Arial, sans-serif;
+  overflow-wrap: anywhere;
+}
+.bc-demo *, .bc-demo *::before, .bc-demo *::after { box-sizing: border-box; }
+.bc-demo .bc-demo__wrap { max-width: 1160px; margin-inline: auto; padding-inline: clamp(20px, 5vw, 64px); }
+.bc-demo .bc-demo__hero { background: #403f3d; color: #fff; padding-block: clamp(40px, 7vw, 88px); border-top: 8px solid var(--bc-demo-red); }
+.bc-demo .bc-demo__eyebrow { font-size: .875rem; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 20px; }
+.bc-demo .bc-demo__title { font-size: clamp(2.3rem, 6vw, 4.5rem); line-height: 1.08; letter-spacing: -.04em; max-width: 850px; margin: 0 0 28px; }
+.bc-demo .bc-demo__lead { font-size: 1.125rem; max-width: 730px; margin: 0 0 28px; }
+.bc-demo a { color: var(--bc-demo-link); text-underline-offset: .2em; }
+.bc-demo .bc-demo__cta { display: inline-block; background: #fff; color: #403f3d; padding: 12px 20px; border-radius: 4px; font-weight: 700; text-decoration: none; }
+.bc-demo .bc-demo__cta:hover { background: #f1ebe7; }
+.bc-demo :is(a, button, summary):focus-visible { outline: 3px solid #ad0000; outline-offset: 5px; }
+.bc-demo .bc-demo__hero a:focus-visible { outline-color: #fff; }
+.bc-demo .bc-demo__index { padding-block: 40px; }
+.bc-demo .bc-demo__heading { font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.25; margin: 0 0 22px; }
+.bc-demo .bc-demo__cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; list-style: none; padding: 0; margin: 0; }
+.bc-demo .bc-demo__cards a { display: block; height: 100%; padding: 24px; border: 1px solid #d6d1ce; border-top: 3px solid var(--bc-demo-red); text-decoration: none; color: #403f3d; }
+.bc-demo .bc-demo__cards a:hover { background: #fff4ef; }
+.bc-demo .bc-demo__num { display: block; color: var(--bc-demo-link); font-size: .875rem; font-weight: 700; margin-bottom: 12px; }
+.bc-demo .bc-demo__card-title { font-size: 1.25rem; font-weight: 700; }
+.bc-demo .bc-demo__cards p { margin-bottom: 0; }
+.bc-demo .bc-demo__chapter { padding-block: 42px; border-top: 1px solid #e0dbd7; scroll-margin-top: 100px; }
+.bc-demo .bc-demo__chapter p { max-width: 780px; margin: 0 0 18px; }
+.bc-demo .bc-demo__chapter details { max-width: 780px; border-left: 3px solid #ff0000; background: #f7f4f1; padding: 16px 20px; }
+.bc-demo summary { cursor: pointer; font-weight: 700; }
+.bc-demo .bc-demo__chapter details p { margin: 14px 0 0; }
+.bc-demo .bc-demo__controls { margin: 28px 0 0; }
+.bc-demo .bc-demo__toggle { border: 1px solid #403f3d; background: #fff; color: #403f3d; font: inherit; padding: 10px 18px; cursor: pointer; border-radius: 4px; }
+.bc-demo .bc-demo__toggle:hover { background: #f4f1ee; }
+.bc-demo .bc-demo__toggle[hidden] { display: none; }
+.bc-demo .bc-demo__credits { background: #f4f1ee; padding-block: 24px; font-size: .875rem; }
+.bc-demo .bc-demo__credits p { margin: 0; }
+@media (max-width: 700px) { .bc-demo .bc-demo__cards { grid-template-columns: 1fr; } }
+/* Sin animaciones ni scroll suave: no se introduce movimiento que reducir.
+   El contenido y los details siguen disponibles si el JS no carga. */
+</style>
+
+<!-- Recurso de fuente mediante URL absoluta pública; hay tipografías de respaldo. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+
+<!-- Contenido completo de demostración: sin clientes ni noticias reales. -->
+<div class="bc-demo" data-bc-project="demo">
+  <header class="bc-demo__hero" aria-labelledby="bc-demo-title">
+    <div class="bc-demo__wrap">
+      <p class="bc-demo__eyebrow">Guía BC · Contenido de demostración</p>
+      <h2 id="bc-demo-title" class="bc-demo__title">Diseñar para entender</h2>
+      <p class="bc-demo__lead">Una buena experiencia empieza con una idea clara. Descubre tres claves para convertir información en un recorrido sencillo, legible y útil.</p>
+      <a class="bc-demo__cta" href="#bc-demo-capitulos">Explorar las tres claves</a>
+    </div>
+  </header>
+
+  <nav id="bc-demo-capitulos" class="bc-demo__index bc-demo__wrap" aria-label="Capítulos de la pieza">
+    <h2 class="bc-demo__heading">Tres claves para una buena experiencia</h2>
+    <ol class="bc-demo__cards">
+      <li><a href="#bc-demo-claridad"><span class="bc-demo__num">01</span><span class="bc-demo__card-title">Empezar por lo esencial</span><p>Dar prioridad a lo que el lector necesita comprender.</p></a></li>
+      <li><a href="#bc-demo-lectura"><span class="bc-demo__num">02</span><span class="bc-demo__card-title">Facilitar la lectura</span><p>Ordenar los contenidos para que se puedan recorrer.</p></a></li>
+      <li><a href="#bc-demo-accion"><span class="bc-demo__num">03</span><span class="bc-demo__card-title">Dar un siguiente paso</span><p>Ofrecer acciones comprensibles y destinos claros.</p></a></li>
+    </ol>
+    <!-- Se muestra solo tras inicializar correctamente la mejora JavaScript. -->
+    <div class="bc-demo__controls">
+      <button type="button" class="bc-demo__toggle" data-bc-demo-toggle
+              aria-controls="bc-demo-clave-1 bc-demo-clave-2 bc-demo-clave-3"
+              aria-expanded="false" hidden>Abrir todas las claves</button>
+    </div>
+  </nav>
+
+  <div class="bc-demo__wrap">
+    <section id="bc-demo-claridad" class="bc-demo__chapter" aria-labelledby="bc-demo-title-1">
+      <p class="bc-demo__num">CLAVE 01</p>
+      <h2 id="bc-demo-title-1" class="bc-demo__heading">Empezar por lo esencial</h2>
+      <p>Antes de dibujar una pantalla, conviene decidir qué debe llevarse el lector. Un mensaje principal ayuda a elegir el contenido, ordenar sus partes y dar a cada elemento el espacio que necesita.</p>
+      <p>Un titular concreto y una introducción breve permiten entender el propósito de la pieza desde el primer momento.</p>
+      <details id="bc-demo-clave-1" data-bc-demo-detail><summary>Una idea para ponerlo en práctica</summary><p>Escribe en una frase qué debería recordar el lector. Úsala como referencia al revisar la estructura de la página.</p></details>
+    </section>
+    <section id="bc-demo-lectura" class="bc-demo__chapter" aria-labelledby="bc-demo-title-2">
+      <p class="bc-demo__num">CLAVE 02</p>
+      <h2 id="bc-demo-title-2" class="bc-demo__heading">Facilitar la lectura</h2>
+      <p>La jerarquía visual ayuda a distinguir un título de una explicación y una idea principal de un detalle. Los párrafos breves y los espacios entre secciones hacen más fácil seguir el recorrido.</p>
+      <p>En móvil, el orden del contenido importa tanto como su tamaño. Una composición sencilla permite leer sin ampliar la pantalla ni buscar elementos fuera de ella.</p>
+      <details id="bc-demo-clave-2" data-bc-demo-detail><summary>Una idea para ponerlo en práctica</summary><p>Revisa la página en una pantalla estrecha. Comprueba que puedes seguir sus títulos y entender su estructura sin leer todavía todos los párrafos.</p></details>
+    </section>
+    <section id="bc-demo-accion" class="bc-demo__chapter" aria-labelledby="bc-demo-title-3">
+      <p class="bc-demo__num">CLAVE 03</p>
+      <h2 id="bc-demo-title-3" class="bc-demo__heading">Dar un siguiente paso</h2>
+      <p>Una acción útil explica qué sucederá al activarla. Los enlaces deben llevar a destinos coherentes con su texto y los botones deben responder a una tarea concreta.</p>
+      <p>La navegación por teclado y los estados de foco ayudan a que más personas puedan utilizar el contenido con comodidad.</p>
+      <details id="bc-demo-clave-3" data-bc-demo-detail><summary>Una idea para ponerlo en práctica</summary><p>Recorre todos los enlaces y botones. Comprueba su destino, su respuesta y si se entiende para qué sirven sin depender solo del color.</p></details>
+      <p><a href="#bc-demo-capitulos">Volver a las tres claves</a></p>
+    </section>
+  </div>
+  <footer class="bc-demo__credits"><div class="bc-demo__wrap"><p>Ejemplo técnico de la guía BC · Textos de demostración · Sin anunciante</p></div></footer>
+</div>
+
+<!-- Comportamiento de la pieza, aislado de los módulos del medio. -->
+<script>
+/* Interacción de ejemplo: abrir o cerrar todas las claves, sin actuar fuera de la pieza. */
+(() => {
+  function init() {
+    const root = document.querySelector('[data-bc-project="demo"]');
+    if (!root || root.dataset.bcInitialized === 'true') return;
+    const button = root.querySelector('[data-bc-demo-toggle]');
+    const details = [...root.querySelectorAll('[data-bc-demo-detail]')];
+    if (!button || !details.length) return;
+    root.dataset.bcInitialized = 'true';
+    function update() {
+      const allOpen = details.every(detail => detail.open);
+      button.textContent = allOpen ? 'Cerrar todas las claves' : 'Abrir todas las claves';
+      button.setAttribute('aria-expanded', String(allOpen));
+    }
+    button.addEventListener('click', () => {
+      const shouldOpen = !details.every(detail => detail.open);
+      details.forEach(detail => { detail.open = shouldOpen; });
+      update();
+    });
+    details.forEach(detail => detail.addEventListener('toggle', update));
+    update();
+    button.hidden = false;
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init, { once: true });
+  } else { init(); }
+})();
+</script>
+</body></html>

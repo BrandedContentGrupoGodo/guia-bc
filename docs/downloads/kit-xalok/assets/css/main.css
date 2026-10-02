@@ -1,0 +1,45 @@
+/* Estilos de la pieza de demostración: todo limitado a .bc-demo */
+.bc-demo {
+  --bc-demo-red: #ff0000;
+  --bc-demo-ink: #403f3d;
+  --bc-demo-link: #ac0000;
+  box-sizing: border-box;
+  width: 100%;
+  color: var(--bc-demo-ink);
+  background: #fff;
+  font: 400 1rem/1.7 "Open Sans", Arial, sans-serif;
+  overflow-wrap: anywhere;
+}
+.bc-demo *, .bc-demo *::before, .bc-demo *::after { box-sizing: border-box; }
+.bc-demo .bc-demo__wrap { max-width: 1160px; margin-inline: auto; padding-inline: clamp(20px, 5vw, 64px); }
+.bc-demo .bc-demo__hero { background: #403f3d; color: #fff; padding-block: clamp(40px, 7vw, 88px); border-top: 8px solid var(--bc-demo-red); }
+.bc-demo .bc-demo__eyebrow { font-size: .875rem; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 20px; }
+.bc-demo .bc-demo__title { font-size: clamp(2.3rem, 6vw, 4.5rem); line-height: 1.08; letter-spacing: -.04em; max-width: 850px; margin: 0 0 28px; }
+.bc-demo .bc-demo__lead { font-size: 1.125rem; max-width: 730px; margin: 0 0 28px; }
+.bc-demo a { color: var(--bc-demo-link); text-underline-offset: .2em; }
+.bc-demo .bc-demo__cta { display: inline-block; background: #fff; color: #403f3d; padding: 12px 20px; border-radius: 4px; font-weight: 700; text-decoration: none; }
+.bc-demo .bc-demo__cta:hover { background: #f1ebe7; }
+.bc-demo :is(a, button, summary):focus-visible { outline: 3px solid #ad0000; outline-offset: 5px; }
+.bc-demo .bc-demo__hero a:focus-visible { outline-color: #fff; }
+.bc-demo .bc-demo__index { padding-block: 40px; }
+.bc-demo .bc-demo__heading { font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.25; margin: 0 0 22px; }
+.bc-demo .bc-demo__cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; list-style: none; padding: 0; margin: 0; }
+.bc-demo .bc-demo__cards a { display: block; height: 100%; padding: 24px; border: 1px solid #d6d1ce; border-top: 3px solid var(--bc-demo-red); text-decoration: none; color: #403f3d; }
+.bc-demo .bc-demo__cards a:hover { background: #fff4ef; }
+.bc-demo .bc-demo__num { display: block; color: var(--bc-demo-link); font-size: .875rem; font-weight: 700; margin-bottom: 12px; }
+.bc-demo .bc-demo__card-title { font-size: 1.25rem; font-weight: 700; }
+.bc-demo .bc-demo__cards p { margin-bottom: 0; }
+.bc-demo .bc-demo__chapter { padding-block: 42px; border-top: 1px solid #e0dbd7; scroll-margin-top: 100px; }
+.bc-demo .bc-demo__chapter p { max-width: 780px; margin: 0 0 18px; }
+.bc-demo .bc-demo__chapter details { max-width: 780px; border-left: 3px solid #ff0000; background: #f7f4f1; padding: 16px 20px; }
+.bc-demo summary { cursor: pointer; font-weight: 700; }
+.bc-demo .bc-demo__chapter details p { margin: 14px 0 0; }
+.bc-demo .bc-demo__controls { margin: 28px 0 0; }
+.bc-demo .bc-demo__toggle { border: 1px solid #403f3d; background: #fff; color: #403f3d; font: inherit; padding: 10px 18px; cursor: pointer; border-radius: 4px; }
+.bc-demo .bc-demo__toggle:hover { background: #f4f1ee; }
+.bc-demo .bc-demo__toggle[hidden] { display: none; }
+.bc-demo .bc-demo__credits { background: #f4f1ee; padding-block: 24px; font-size: .875rem; }
+.bc-demo .bc-demo__credits p { margin: 0; }
+@media (max-width: 700px) { .bc-demo .bc-demo__cards { grid-template-columns: 1fr; } }
+/* Sin animaciones ni scroll suave: no se introduce movimiento que reducir.
+   El contenido y los details siguen disponibles si el JS no carga. */
